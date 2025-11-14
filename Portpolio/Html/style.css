@@ -486,6 +486,19 @@
         font-family:'Courier New', 'Courier New', Courier, monospace;
         font-weight: 500;
     }
-    
 
+    /*Skill Style*/
+    
+    .skills {
+        color: white;
+        font-size: 2rem;
+        padding: 10rem 0;
+    }
+
+    .skill-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;  
+    }
 
