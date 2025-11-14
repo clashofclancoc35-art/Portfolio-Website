@@ -44,12 +44,16 @@
         align-items: center;
         justify-content: center;      /* FIX GAP / VERTICAL CENTER */
         text-align: center;
-        padding: 80 px 20px;
+        padding: 80px 20px;
 
     }
 
     .main-container .content{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;             /* NEW CLEAN SPACING FOR TEXT */
         text-align: center;
     }
 
@@ -87,12 +91,23 @@
         justify-content: center;
         align-items: center;
         height: auto;
-        width: 120%;
+        width: 80%;
         margin: 0 auto;
         padding: 0;
+        margin-bottom: 30px;
     }
 
-    .main-container h1 {
+    .main-container .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .main-container h1,
+    .main-container span{
         font-size: 3rem;
         text-align: center;
     }
@@ -102,12 +117,11 @@
         text-align: center;
     }
 
-    .main-container h1,
     .main-container .typewrite,
     .main-container .social-links,
     .main-container .social-links a{
         text-align: center;
-        margin: 20px 0;
+        margin: 10px 0;
     }
 }
 
