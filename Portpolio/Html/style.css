@@ -8,12 +8,9 @@
         outline: none;
         scroll-behavior: smooth;
         font-family: 'Poppins', sans-serif;
-        /* background: #121217;
-        overflow-x: hidden; */
     }
 
     html {
-        /*scroll-behavior: smooth;*/
         font-size: 62.5%;
     }
 
@@ -22,8 +19,6 @@
         overflow-x: hidden;
         width: 100%;
         height: auto;
-        /*height: 100vh; */
-
     }
 
     ::-webkit-scrollbar {
@@ -89,21 +84,6 @@
         transform: scale(1.1) translate(-3px);
         color: #b74b4b;
     }
-
-    
-    /* .logo img{
-        position: relative;
-        width: 4vw;
-        height: auto;
-        box-shadow: 0 0 25px solid #b74b4b;
-        cursor: pointer;
-        transition: 0.2s linear;
-    }
-
-    .logo img:hover {
-        color: black;
-        transform: scale(1.1) translate(-5px);
-    } */
 
     .nav-container .links{
         display: flex;
@@ -282,29 +262,32 @@
         }
     }
     .main-container .content{
+        margin-right: 40px;
         color: white;
         width: 40%;
     }
 
     .content h1{
-        /* font-size: clamp(1rem, 1rem +5vw, 1.8rem); */
         margin-bottom: 20px;
-        font-size: 80px;
+        font-size: 50px;
         font-weight: 600;
-       /* min-width: 280px; */
+        justify-content: center;
+        text-align: center;
     }
     .content h1 span{
         color: #b74b4b;
         text-shadow: 0 0 10px #b74b4b;
-
+        justify-content: center;
+        text-align: center;
 
     }
 
     .content .typewrite{
-      /*  font-size: clamp(1rem, 1rem +5vw, 2.5rem); */
         font-weight: 600;
-        font-size: 6rem;
+        font-size: 4rem;
         margin-bottom: 1rem;
+        justify-content: center;
+        text-align: center;
     }
 
     .content .typewrite-text{
@@ -337,12 +320,24 @@
 
     }
 
+    .social-links{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .btn{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
 
     .btn button {
-        display: inline-block;
+        display: flex;
         padding: 1rem 2.8rem;
         background-color: black;
-        border-radius: 4 rem;
+        border-radius: 4rem;
         font-size: 1.6rem;
         color: #b74b4b;
         letter-spacing: 0.3rem;
@@ -351,7 +346,6 @@
         transition: 0.3s ease;
         cursor: pointer;
         justify-content: center;
-
     }
  
     .btn button:hover {
@@ -359,9 +353,6 @@
         background-color: #b74b4b;
         color: black;
     }
- 
-    
-
 
     section .content{
         width: 80%;
@@ -370,17 +361,43 @@
         scroll-margin-top: 10vh;
     }
 
+   /* ABOUT STYLE */ 
+
     .about .about-details{
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: row-reverse;
     }
+
+    .title{
+        opacity: 0;
+        transform: translate(20px);
+        transition: all 0.6s ease;     
+    }
     
     section .title{
         display: flex;
         justify-content: center;
         margin-bottom: 40px;
+        flex-wrap: wrap;
+    }
+    
+    .title.active{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    section .title span::before,
+    section .title span::after {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s ease;
+    }
+
+    section .title span.active::before,
+    section .title span.active::after {
+    transform: scaleX(1);
     }
 
     section .title span{
@@ -389,6 +406,7 @@
         font-weight: 600;
         position: relative;
         padding-bottom: 8px;
+        text-align: center;
     }
 
     section .title span::before,
@@ -400,13 +418,16 @@
         background:#b74b4b;
         left: 0;
         bottom: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.6s ease;
     }
 
     section .title span::after{
         bottom: -7px;
         width: 70%;
-        left: 50%;
-        transform:translate(-50%);
+        left: 15%;
+        transform:translate(-50%) scaleX(0);
     }
 
     .about .about-details .left{
@@ -448,11 +469,22 @@
         margin-bottom: 10px;
     }
 
+    .about-details .right .topic h1{
+        color: white;
+        font-family: 'Poppins', 'Inter', 'Montserrat', Roboto;
+    }
+
+    .about-details .right .topic span{
+        color:#b74b4b;
+        font-family: 'Playfair Display', Lora;
+    }
+
     .about-details .right p{
         text-align: justify;
         color: white;
-        font-size: 1.5rem;
-
+        font-size: 2rem;
+        font-family:'Courier New', 'Courier New', Courier, monospace;
+        font-weight: 500;
     }
     
 

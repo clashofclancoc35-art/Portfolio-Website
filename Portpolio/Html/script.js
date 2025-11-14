@@ -87,3 +87,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+const reveals = document.querySelectorAll('.title');
+    const spans = document.querySelectorAll('.title span');
+
+    function titleOnScroll() {
+        reveals.forEach((el, i) => {
+            const top = el.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (top < windowHeight - 100) {
+                el.classList.add('active');
+                spans[i].classList.add('active');
+            }
+        });
+    }
+    window.addEventListener('scroll', titleOnScroll);
+    titleOnScroll();
+    window.addEventListener('load', titleOnScroll);
+
