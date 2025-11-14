@@ -492,7 +492,15 @@
     .skills {
         color: white;
         font-size: 2rem;
-        padding: 10rem 0;
+        padding: 20rem 0;
+
+    }
+
+    .skills h2{
+        font-family: 'Poppins', 'Inter', 'Montserrat', Roboto;
+        font-size: 3rem;
+        padding: 20px 0;
+        gap:10px;
     }
 
     .skill-grid{
@@ -500,5 +508,38 @@
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 2rem;
         margin-top: 3rem;  
+    }
+
+    .skill-card{
+        padding: 2rem;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.01);
+        backdrop-filter:  blur(5px);
+    }
+
+    .skill-card:hover{
+        transform: translateY(-10px);
+        border-color: #b74b4b;
+        box-shadow: 0 10px 30 px #b74b4b;
+    }
+
+    .skill-card i{
+        font-size: 4rem;
+        color: blue;
+        margin-bottom: 1rem;
+    }
+
+    .skill-card h3{
+        font-size: 2rem;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        margin-bottom: 1rem;
+    }
+
+    .skill-card p{
+        font-size: 1.9rem;
+        font-family: 'Playfair Display', Lora;
+        margin-bottom: 1rem;
     }
 
