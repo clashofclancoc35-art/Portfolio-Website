@@ -1,4 +1,14 @@
-
+    :root{
+        --neon-blue: #5390d9;
+        --neon-pink: #56cfe1;
+        --neon-purple: #72efdd;
+        --neon-green: #80ffdb;
+        --dark-bg: #010101;
+        --darker-bg: #0a0a0a0a;
+        --text-color: #eee;
+    }
+    
+    
     * {
         margin: 0;
         padding: 0;
@@ -530,8 +540,11 @@
 
     .skill-card i{
         font-size: 4rem;
-        color: blue;
+        color: #5390d9;
         margin-bottom: 1rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
     }
 
     .skill-card h3{
@@ -539,6 +552,14 @@
         font-family:Verdana, Geneva, Tahoma, sans-serif;
         margin-bottom: 1rem;
     }
+    
+    h3{
+        color: #b74b4b;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+    }
+
 
     .skill-card p{
         font-size: 1.9rem;
@@ -569,8 +590,8 @@
         font-size: 30px;
         font-weight: 600;
         position: relative;
-        padding-bottom: 8px;
         text-align: center;
+        padding-bottom: 8px;
     }
 
     .skill .title span::before,
@@ -611,19 +632,26 @@
         color: #ccc;
     }
 
-    .skills{
-        margin-bottom: 1.5rem;
-    }
-
-    .skill-name{
+    .skill-card .skill-item .skill-name{
         display: flex;
         justify-content: space-between;
         margin-bottom: 0.5rem;
+        color: #b74b4b;
     }
 
-    .skill-progress{
-        height: 100%;
+    .skill-card .skill-item .skill-progress{
+        height: 10px;
+        width: 0;
         border-radius: 5px;
-        background: linear-gradient(90deg, #b74b4b);
-        animation: fillbar 2s ease-out forwards;
+        background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+        transition: width 2s ease;
+    }
+
+    .skill-card .skill-item .skill-bar{
+        height: 10px;
+        background-color: #333;
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
     }

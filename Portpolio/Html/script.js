@@ -1,10 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => {
-  AOS.init({
-  duration: 1000, 
-  easing: 'ease-in-out', 
-  offset: 200, 
+AOS.init({
+  once: false,
+  mirror: true,
+  duration: 1500,
+  offset: 150,
+  easing: 'ease-in-out'
 });
-  
+
+// Reset animation when elements scroll out of view
+window.addEventListener("scroll", () => {
+  document.querySelectorAll("[data-aos]").forEach(el => {
+    if (el.getBoundingClientRect().top > window.innerHeight) {
+      el.classList.remove("aos-animate");
+    }
+  });
+});
+
+setTimeout(() => AOS.refreshHard(), 400);
+
   // 🔹 Typewriter Effect
   const texts = ["Good", "Fast Learner", "Sometimes Bad", "Short Term"];
   const colors = ["#b74b4b", "#ff8c00", "#00bfff", "#32cd32"];
@@ -92,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
     });
   });
-});
 
 
 const reveals = document.querySelectorAll('.title');
@@ -113,3 +124,31 @@ const reveals = document.querySelectorAll('.title');
     titleOnScroll();
     window.addEventListener('load', titleOnScroll);
 
+// Skill Bar Animation on Scroll
+const skillBars = document.querySelectorAll('.skill-progress');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+
+      const bar = entry.target;
+
+      // Get final width
+      const finalWidth = bar.getAttribute('data-width');
+
+      // Reset width first
+      bar.style.width = "0%";
+
+      // Animate to final width
+      setTimeout(() => {
+        bar.style.transition = "width 2s ease";
+        bar.style.width = finalWidth;
+      }, 150);
+
+      // Run animation only once
+      observer.unobserve(bar);
+    }
+  });
+}, { threshold: 0.5 });
+
+skillBars.forEach(bar => observer.observe(bar));
