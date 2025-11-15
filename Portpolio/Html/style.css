@@ -223,9 +223,8 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        justify-content: center;
         align-items: center;
-        padding: 150px;
+        padding: 150px;      
     }
 
     .main-container .image{
@@ -238,6 +237,8 @@
         cursor: pointer;
         border-style: double;
         animation: animate 6s ease-in-out infinite;
+        padding: 10px 0;
+        margin-left: 50px;
     }
 
     .main-container .image img{
