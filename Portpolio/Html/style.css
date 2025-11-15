@@ -493,9 +493,8 @@
     /*Skill Style*/
     
     .skills {
-        color: white;
-        font-size: 2rem;
-        padding: 20rem 0;
+        padding: 5rem 5%;
+        background-color: black;
 
     }
 
@@ -506,7 +505,7 @@
         gap:10px;
     }
 
-    .skill-grid{
+    .skills-grid{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 2rem;
