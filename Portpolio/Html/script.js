@@ -138,6 +138,7 @@ const observer = new IntersectionObserver((entries) => {
 
       // Reset width first
       bar.style.width = "0%";
+      bar.style.transition = "none";
 
       // Animate to final width
       setTimeout(() => {
