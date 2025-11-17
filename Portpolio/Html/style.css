@@ -244,9 +244,9 @@
         height: 500px;
         border-radius: 50%;
         overflow: hidden;
-        box-shadow: 0 0 50px #b74b4b;
-        cursor: pointer;
         border-style: double;
+        box-shadow: 0 0 45px #b74b4b;
+        cursor: pointer;
         animation: animate 6s ease-in-out infinite;
         padding: 10px 0;
         margin-left: 50px;
@@ -255,6 +255,8 @@
     .main-container .image img{
         width: 100%;
         height: auto;
+        object-fit: cover;
+        object-position: center;
 
     }
 

@@ -2,65 +2,75 @@
 
 @media (max-width: 768px) {
 
-    /* Main container: stack image and content vertically */
+    
     .home .main-container {
         flex-direction: column;
         align-items: center;
         gap: 2rem;
-        padding: 1rem;
+        padding: 1rem !important;
+        width: 100%;
+        text-align: center;
     }
 
-    /* Image adjustments */
+    
     .home .image {
-        width: 80%;
-        max-width: 300px;
-        text-align: center;
+        margin-top: 10rem;
+        width: 250px;
+        height: 250px;
+        margin-left: 0;
+        padding: 5px;
+        border-radius: 50%;
+        box-shadow: 0 0 25px #b74b4b; 
+        animation: none; 
     }
 
     .home .image img {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;     
+        
     }
 
-    /* Content adjustments */
     .home .content {
         width: 90%;
-        text-align: center;
+        margin-right: 0;
     }
 
-    /* Heading adjustments */
     .home .content h1 {
+        margin-top: 1.5rem;
         font-size: 2rem;
+        line-height: 1.3;
     }
 
-    /* Typewriter text */
     .home .content .typewrite {
         font-size: 1.5rem;
         margin-top: 1rem;
     }
 
-    /* Social links */
     .home .content .social-links {
-        justify-content: center;
-        gap: 1rem;
-        margin-top: 1.5rem;
-        flex-wrap: wrap;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        gap: 1rem;              
+        margin-top: 2rem;
+        flex-wrap: wrap;         
+        width: 100%; 
     }
 
     .home .content .social-links a {
-        font-size: 2rem;
-        width: 50px;
-        height: 50px;
+        font-size: 1.8rem;
+        width: 55px;
+        height: 55px;
+        margin: 0;              
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    /* Button adjustments */
     .home .content .btn button {
         font-size: 1.4rem;
         padding: 8px 16px;
-        margin-top: 1.5rem;
+        margin-top: 4rem;
     }
 }
 
@@ -148,14 +158,13 @@
 
 @media (max-width: 768px) {
 
-    /* Center the title */
-    #skill .title h2 span {
+    .skill .title h2 span {
+        margin-top: 2rem;
         font-size: 2.5rem;
         text-align: center;
         display: block;
     }
 
-    /* Stack skill cards vertically */
     .skills-grid {
         display: flex;
         flex-direction: column;
@@ -163,7 +172,6 @@
         align-items: center;
     }
 
-    /* Adjust individual skill cards */
     .skill-card {
         width: 95%;
         max-width: 500px;
@@ -171,25 +179,21 @@
         text-align: center;
     }
 
-    /* Skill card icon */
     .skill-card i {
         font-size: 3rem;
         margin-bottom: 1rem;
     }
 
-    /* Skill card headings */
     .skill-card h3 {
         font-size: 2rem;
         margin-bottom: 1rem;
     }
 
-    /* Paragraph text inside skill card */
     .skill-card p {
         font-size: 1.4rem;
         line-height: 1.5;
     }
 
-    /* Skill progress section */
     .skill-item {
         margin-top: 1rem;
     }
@@ -272,5 +276,4 @@
         font-size: 1.4rem;
         padding: 8px 15px;
     }
-
 }
